@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Blood Bank</title>
+	<link rel="stylesheet" href="../style.css">
+</head> 
+<link href="https://fonts.googleapis.com/css?familyRoboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<body>
+	<aside>
+		<p> Menu </p>
+		<a href='../home.html'>
+			<i class="fa fa-user-o" aria-hidden="true"></i>
+			HOME 
+		<a href='../html/addblood.html'>
+			<i class="fa fa-clone" aria-hidden="true"></i>
+			ADD BLOOD
+		</a>
+		<a href="#">
+			<i class="fa fa-star-o" aria-hidden="true"></i>
+			PATIENT DETAILS
+		</a>
+		<a href='../html/addtrans.html'>
+			<i class="fa fa-star-o" aria-hidden="true"></i>
+			TRANSACTION DETAILS
+		</a>
+		<a href='../html/searchblood.html'>
+			<i class="fa fa-trash-o" aria-hidden="true"></i>
+			SEARCH BLOOD
+		</a>
+	</aside>
+	<div style = "position:fixed; right:80px; top:20px;">
+		<p><img src="../assets/images/logo.png" style="float: right;" width="220" height="80">
+	</div>
+	<div style="position:fixed; right:500px; top:60px;">
+		<h4 style="color: darkblue;">ENTER PATIENT DETAILS</h4>
+	<form id="patient_details">
+		<label for="blood_grp">Blood Group :</label>&nbsp
+		<select id="blood_grp" name="blood_grp" form="patient_details">
+			<option value="">Select Blood Group</option>
+			<option value="O+ve">O+ve</option>
+			<option value="O-ve">O-ve</option>
+			<option value="A+ve">A+ve</option>
+			<option value="A-ve">A-ve</option>
+			<option value="B+ve">B+ve</option>
+			<option value="B-ve">B-ve</option>
+			<option value="AB+ve">AB+ve</option>
+			<option value="AB-ve">AB-ve</option>
+		</select><br>
+		<label for="patient_name">Patient name :</label>&nbsp
+		<input type="text" id="patient_name" name="patient_name" placeholder="patient name"><br>
+		
+		<label for="patientId">Patient ID :</label>&nbsp
+		<input type="text" id="patientId" name="patientId" placeholder="patient ID"><br>
+		
+		<label for="patient_contact">Patient contact no. :</label>&nbsp
+		<input type="number" id="patient_contact" name="patient_contact" placeholder="patient contact no."><br>
+		
+		<label for="guardian_name">Guardian name :</label>&nbsp
+		<input type="text" id="guardian_name" name="guardian_name" placeholder="guardian name"><br>
+		
+		<label for="guardian_contact">Guardian contact no. :</label>&nbsp
+		<input type="number" id="guardian_contact" name="guardian_contact" placeholder="guardian contact no."><br>
+		
+		<label for="required_date"> Required Date :</label>&nbsp
+		<input type="date" id="required_date" name="required_date" placeholder="required date"><br>
+		
+		<label for="quantity">Quantity :</label>&nbsp
+		<input type="number" id="quantity" name="quantity" placeholder="quantity"><br>
+			
+		<button name="send" type="button" class="buttonload" id="send" style="position: absolute; right: 50%; margin: 10px; border-radius: 10px; border-width: 1px;">
+			<i class="fa fa-circle-o-notch fa-spin" style="visibility: hidden; position: absolute; right: 45%; "></i>Send Data
+		</button>  		
+
+	</form>
+		<script src="../js/addPatient.js"></script>
+	</div>
+</body>
+</html>

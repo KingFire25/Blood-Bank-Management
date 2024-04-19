@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Blood Bank</title>
+	<link rel="stylesheet" href="./style.css">
+    <style>
+        
+        /* Float four columns side by side */
+       .column {
+       float: right;
+       width: 15%;
+       padding: 0 10px;
+     }
+     
+     /* Remove extra left and right margins, due to padding */
+     .row {margin: 0 -5px;}
+     
+     /* Clear floats after the columns */
+     .row:after {
+       content: "";
+       display: table;
+       clear: both;
+     }
+     .card {
+       border-radius: 10px;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+       max-width: 300px;
+       margin: auto;
+       text-align: center;
+       font-family: arial;
+       padding: 6px;
+     }
+     img {
+       border-radius: 10px 10px 0 0;
+     }
+     
+     
+     .card button {
+         border-radius: 10px;
+       border: none;
+       outline: 0;
+       padding: 12px;
+       color: white;
+       background-color: #000;
+       text-align: center;
+       cursor: pointer;
+       width: 100%;
+       font-size: 18px;
+     }
+     
+     .card button:hover {
+       opacity: 0.7;
+     }
+    </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head> 
+
+<body>
+	<div style = "position:fixed; left:80px; top:20px;">
+		<p><img src="./assets/images/logo.png" style="float: right;" width="220" height="80">
+      <a style="position: fixed; right: 80px;" href="https://bloodbank.auth.us-east-1.amazoncognito.com/logout?client_id=6kosl7dfqtdcgtl7li5dsku4hp&logout_uri=https://www.google.com">Log Out</a>
+  </div>
+  
+    <div style = "position:fixed; right:160px; top:150px;">
+    
+        <a href='./html/addblood.html'>
+          <div class="column" style="height: 250px; width: 220px;">
+            <div class="card" style="align-items: center;">
+              <img src="./assets/images/addblood.jpg" alt="ADD BLOOD" style="width:90.5%">
+              <p>Add blood details to the database.</p>
+              <p><button>Add Blood</button></p>
+            </div>
+          </div>
+        </a>
+        
+        <a href='./html/patient.html'>
+          <div class="column" style="height: 250px; width: 220px;" >
+            <div class="card" style="align-items: center;">
+              <img src="./assets/images/patient.png" alt="PATIENT DETAILS" style="width:70%">
+              <p>Add patient details to the database.</p>
+              <p><button>Add Patient</button></p>
+            </div>
+          </div>
+        </a>
+        
+      <a href='./html/addtrans.html'>
+          <div class="column" style="height: 250px; width: 220px;">
+          <div class="card" style="align-items: center;">
+            <img src="./assets/images/trans.png" alt="TRANSACTION DETAILS" style="width:70%">
+            <p>Add transaction details to the database.</p>
+            <p><button>Add Transaction</button></p>
+          </div>
+          </div>
+      </a>
+      
+      <a href='./html/searchblood.html'>
+        <div class="column" style="align-items: center;height: 250px; width: 220px;">
+        <div class="card" style="align-items: center;">
+          <img src="./assets/images/search.png" alt="SEARCH BLOOD" style="width:81.6%">
+          <p>Check Availability of blood</p>
+          <p><button>Search</button></p>
+        </div>
+        </div>
+        </a>
+        
+        </div>
+    </body>
+</html>
